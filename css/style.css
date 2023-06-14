@@ -106,12 +106,12 @@ header {
 main {
   width: 100%;
   height: 100%;
-  background-color: green;
   display: flex;
+  justify-content: space-between;
 }
 
 .main__container--1 {
-  width: 400px;
+  width: 15%;
   height: 100%;
   background-color: black;
   padding-left: 75px;
@@ -123,8 +123,8 @@ main {
 }
 
 .main__container--1 h2 {
-  font-size: 47px;
-  padding: 45px;
+  font-size: 30px;
+  padding: 40px 0 40px 0;
 }
 
 .main__programing {
@@ -142,19 +142,47 @@ main {
 
 .cajas i {
   color: aliceblue;
-  font-size: 70px;
+  font-size: 60px;
+}
+
+.main__container--2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  height: 90%;
+  width: 80%;
 }
 
 .main__grid-container {
+  width: 100%;
+  height: 100%;
+  margin: auto;
   display: grid;
-  grid-template-rows: 200px 200px 200px;
-  grid-template-columns: 400px 400px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-auto-rows: 250px;
+  grid-gap: 20px;
+  padding: 20px;
 }
 
 .main__project {
-  width: 500px;
-  height: 400px;
+  width: 100%;
+  height: 100%;
   background-color: yellow;
+  overflow: hidden;
+}
+
+.main__project img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  filter: grayscale(1) brightness(0.4);
+  transition: 0.1s;
+}
+
+.main__project img:hover {
+  filter: grayscale(0) brightness(1);
+  transform: scale(1.5) rotate(-5deg);
 }
 
 @keyframes maquina {
